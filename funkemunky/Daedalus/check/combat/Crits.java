@@ -18,11 +18,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class Criticals extends Check {
+public class Crits extends Check {
     public static Map<UUID, Map.Entry<Integer, Long>> CritTicks = new HashMap<>();
     public static Map<UUID, Double> FallDistance = new HashMap<>();
 
-    public Criticals(funkemunky.Daedalus.Daedalus Daedalus) {
+    public Crits(funkemunky.Daedalus.Daedalus Daedalus) {
         super("Criticals", "Criticals", Daedalus);
         this.setEnabled(true);
         this.setBannable(true);

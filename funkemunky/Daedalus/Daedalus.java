@@ -93,7 +93,7 @@ public class Daedalus extends JavaPlugin implements Listener {
         this.Checks.add(new FastBow(this));
         this.Checks.add(new Twitch(this));
         this.Checks.add(new NoSlowdown(this));
-        this.Checks.add(new Criticals(this));
+        this.Checks.add(new Crits(this));
         this.Checks.add(new ReachA(this));
         this.Checks.add(new ReachB(this));
         this.Checks.add(new ReachC(this));
@@ -208,8 +208,8 @@ public class Daedalus extends JavaPlugin implements Listener {
                 AutoclickerB.LastMS.clear();
             if (!AutoclickerB.ClickTicks.isEmpty())
                 AutoclickerB.ClickTicks.clear();
-            if (!Criticals.CritTicks.isEmpty())
-                Criticals.CritTicks.clear();
+            if (!Crits.CritTicks.isEmpty())
+                Crits.CritTicks.clear();
             if (!KillAuraA.ClickTicks.isEmpty())
                 KillAuraA.ClickTicks.clear();
             if (!KillAuraA.Clicks.isEmpty())
