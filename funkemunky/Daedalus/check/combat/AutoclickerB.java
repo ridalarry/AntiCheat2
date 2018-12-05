@@ -13,12 +13,12 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 import java.util.*;
 
-public class AutoClickerB extends Check {
+public class AutoclickerB extends Check {
     public static Map<UUID, Long> LastMS;
     public static Map<UUID, List<Long>> Clicks;
     public static Map<UUID, Map.Entry<Integer, Long>> ClickTicks;
 
-    public AutoClickerB(funkemunky.Daedalus.Daedalus Daedalus) {
+    public AutoclickerB(funkemunky.Daedalus.Daedalus Daedalus) {
         super("AutoClickerB", "AutoClicker (Type B)", Daedalus);
         LastMS = new HashMap<>();
         Clicks = new HashMap<>();
@@ -57,9 +57,9 @@ public class AutoClickerB extends Check {
                 return;
             }
             if (Clicks.containsKey(damager.getUniqueId())) {
-                List<Long> Clicks = AutoClickerB.Clicks.get(damager.getUniqueId());
+                List<Long> Clicks = AutoclickerB.Clicks.get(damager.getUniqueId());
                 if (Clicks.size() == 3) {
-                    AutoClickerB.Clicks.remove(damager.getUniqueId());
+                    AutoclickerB.Clicks.remove(damager.getUniqueId());
                     Collections.sort(Clicks);
                     long Range = Clicks.get(Clicks.size() - 1) - Clicks.get(0);
                     if (Range >= 0 && Range <= 2) {
@@ -69,12 +69,12 @@ public class AutoClickerB extends Check {
                     }
                 } else {
                     Clicks.add(MS);
-                    AutoClickerB.Clicks.put(damager.getUniqueId(), Clicks);
+                    AutoclickerB.Clicks.put(damager.getUniqueId(), Clicks);
                 }
             } else {
                 List<Long> Clicks = new ArrayList<>();
                 Clicks.add(MS);
-                AutoClickerB.Clicks.put(damager.getUniqueId(), Clicks);
+                AutoclickerB.Clicks.put(damager.getUniqueId(), Clicks);
             }
         }
         if (ClickTicks.containsKey(damager.getUniqueId()) && UtilTime.elapsed(Time, 5000L)) {

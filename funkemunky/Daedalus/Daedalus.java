@@ -86,10 +86,10 @@ public class Daedalus extends JavaPlugin implements Listener {
         this.Checks.add(new KillAuraC(this));
         this.Checks.add(new KillAuraD(this));
         this.Checks.add(new KillAuraE(this));
-        this.Checks.add(new KillAuraF(this));
+        this.Checks.add(new KillauraF(this));
         this.Checks.add(new HitBoxes(this));
-        this.Checks.add(new AutoClickerA(this));
-        this.Checks.add(new AutoClickerB(this));
+        this.Checks.add(new AutoclickerA(this));
+        this.Checks.add(new AutoclickerB(this));
         this.Checks.add(new FastBow(this));
         this.Checks.add(new Twitch(this));
         this.Checks.add(new NoSlowdown(this));
@@ -202,12 +202,12 @@ public class Daedalus extends JavaPlugin implements Listener {
     public String resetData() {
         try {
             resetAllViolations();
-            if (!AutoClickerB.Clicks.isEmpty())
-                AutoClickerB.Clicks.clear();
-            if (!AutoClickerB.LastMS.isEmpty())
-                AutoClickerB.LastMS.clear();
-            if (!AutoClickerB.ClickTicks.isEmpty())
-                AutoClickerB.ClickTicks.clear();
+            if (!AutoclickerB.Clicks.isEmpty())
+                AutoclickerB.Clicks.clear();
+            if (!AutoclickerB.LastMS.isEmpty())
+                AutoclickerB.LastMS.clear();
+            if (!AutoclickerB.ClickTicks.isEmpty())
+                AutoclickerB.ClickTicks.clear();
             if (!Criticals.CritTicks.isEmpty())
                 Criticals.CritTicks.clear();
             if (!KillAuraA.ClickTicks.isEmpty())
@@ -226,8 +226,8 @@ public class Daedalus extends JavaPlugin implements Listener {
                 KillAuraC.AimbotTicks.clear();
             if (!KillAuraE.lastAttack.isEmpty())
                 KillAuraE.lastAttack.clear();
-            if (!KillAuraF.counts.isEmpty())
-                KillAuraF.counts.clear();
+            if (!KillauraF.counts.isEmpty())
+                KillauraF.counts.clear();
             if (!Regen.FastHealTicks.isEmpty())
                 Regen.FastHealTicks.clear();
             if (!Regen.LastHeal.isEmpty())

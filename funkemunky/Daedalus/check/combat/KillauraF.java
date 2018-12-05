@@ -17,11 +17,11 @@ import funkemunky.Daedalus.utils.UtilCheat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class KillAuraF extends Check {
+public class KillauraF extends Check {
     public static HashMap<Player, Integer> counts = new HashMap<>();
     private ArrayList<Player> blockGlitched = new ArrayList<>();
 
-    public KillAuraF(funkemunky.Daedalus.Daedalus Daedalus) {
+    public KillauraF(funkemunky.Daedalus.Daedalus Daedalus) {
         super("KillAuraF", "KillAura (Wall)", Daedalus);
         setEnabled(true);
         setBannable(false);

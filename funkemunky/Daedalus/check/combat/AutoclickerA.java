@@ -15,11 +15,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class AutoClickerA extends Check {
+public class AutoclickerA extends Check {
     public Map<UUID, Integer> clicks;
     private Map<UUID, Long> recording;
 
-    public AutoClickerA(funkemunky.Daedalus.Daedalus Daedalus) {
+    public AutoclickerA(funkemunky.Daedalus.Daedalus Daedalus) {
         super("AutoClickerA", "AutoClicker (Type A)", Daedalus);
         setEnabled(true);
         setBannable(true);
