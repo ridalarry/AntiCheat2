@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/Rida/Desktop/anti cheat test pit edition - Copy (3)/spigot.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Rida/Desktop/anti cheat test pit edition - Copy (3)/plugins/ProtocolLib (5).jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
