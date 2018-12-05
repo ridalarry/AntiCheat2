@@ -11,64 +11,59 @@ import funkemunky.Daedalus.utils.PearlGlitchType;
 
 public class PearlGlitchEvent extends Event implements Cancellable {
 
-	private Player player;
-	private Location from;
-	private Location to;
-	private ItemStack pearls;
-	private PearlGlitchType type;
-	private static HandlerList handlers = new HandlerList();
-	private boolean cancelled = false;
+    private static HandlerList handlers = new HandlerList();
+    private Player player;
+    private Location from;
+    private Location to;
+    private ItemStack pearls;
+    private PearlGlitchType type;
+    private boolean cancelled = false;
 
-	public PearlGlitchEvent(Player player, Location from, Location to, ItemStack pearls, PearlGlitchType type) {
-		this.player = player;
-		this.from = from;
-		this.to = to;
-		this.pearls = pearls;
-		this.type = type;
-	}
+    public PearlGlitchEvent(Player player, Location from, Location to, ItemStack pearls, PearlGlitchType type) {
+        this.player = player;
+        this.from = from;
+        this.to = to;
+        this.pearls = pearls;
+        this.type = type;
+    }
 
-	public Player getPlayer() {
-		return this.player;
-	}
+    public static HandlerList getHandlerList() {
+        return handlers;
+    }
 
-	public Location getFrom() {
-		return this.from;
-	}
+    public Player getPlayer() {
+        return this.player;
+    }
 
-	public Location getTo() {
-		return this.to;
-	}
+    public Location getFrom() {
+        return this.from;
+    }
 
-	public ItemStack getItems() {
-		return this.pearls;
-	}
+    public Location getTo() {
+        return this.to;
+    }
 
-	public PearlGlitchType getType() {
-		return type;
-	}
+    public ItemStack getItems() {
+        return this.pearls;
+    }
 
-	public boolean isType(PearlGlitchType type) {
-		if (type == this.type) {
-			return true;
-		}
-		return false;
-	}
+    public PearlGlitchType getType() {
+        return type;
+    }
 
-	public boolean isCancelled() {
-		return this.cancelled;
-	}
+    public boolean isType(PearlGlitchType type) {
+        return type == this.type;
+    }
 
-	public void setCancelled(boolean cancelled) {
-		this.cancelled = cancelled;
-	}
+    public boolean isCancelled() {
+        return this.cancelled;
+    }
 
-	public static HandlerList getHandlerList() {
-		return handlers;
-	}
+    public void setCancelled(boolean cancelled) {
+        this.cancelled = cancelled;
+    }
 
-	public HandlerList getHandlers() {
-		// TODO Auto-generated method stub
-		return handlers;
-	}
-
+    public HandlerList getHandlers() {
+        return handlers;
+    }
 }

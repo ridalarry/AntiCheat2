@@ -6,28 +6,28 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 public class PacketSwingArmEvent extends Event {
-	public Player Player;
-	public PacketEvent Event;
-	private static final HandlerList handlers = new HandlerList();
+    private static final HandlerList handlers = new HandlerList();
+    public Player Player;
+    public PacketEvent Event;
 
-	public PacketSwingArmEvent(PacketEvent Event, Player Player) {
-		this.Player = Player;
-		this.Event = Event;
-	}
+    public PacketSwingArmEvent(PacketEvent Event, Player Player) {
+        this.Player = Player;
+        this.Event = Event;
+    }
 
-	public PacketEvent getPacketEvent() {
-		return this.Event;
-	}
+    public static HandlerList getHandlerList() {
+        return handlers;
+    }
 
-	public Player getPlayer() {
-		return this.Player;
-	}
+    public PacketEvent getPacketEvent() {
+        return this.Event;
+    }
 
-	public HandlerList getHandlers() {
-		return handlers;
-	}
+    public Player getPlayer() {
+        return this.Player;
+    }
 
-	public static HandlerList getHandlerList() {
-		return handlers;
-	}
+    public HandlerList getHandlers() {
+        return handlers;
+    }
 }

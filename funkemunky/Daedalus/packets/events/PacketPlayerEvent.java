@@ -1,68 +1,69 @@
 package funkemunky.Daedalus.packets.events;
 
-import org.bukkit.event.HandlerList;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
+import org.bukkit.event.HandlerList;
 
 public class PacketPlayerEvent extends Event {
-	private Player Player;
-	private double x;
-	private double y;
-	private double z;
-	private float pitch;
-	private float yaw;
-	private static final HandlerList handlers;
-	private PacketPlayerType type;
+    private static final HandlerList handlers;
 
-	static {
-		handlers = new HandlerList();
-	}
+    static {
+        handlers = new HandlerList();
+    }
 
-	public PacketPlayerEvent(final Player Player, final double x, final double y, final double z, final float yaw,
-			final float pitch, final PacketPlayerType type) {
-		super();
-		this.Player = Player;
-		this.x = x;
-		this.y = y;
-		this.z = z;
-		this.pitch = pitch;
-		this.yaw = yaw;
-		this.type = type;
-	}
+    private Player Player;
+    private double x;
+    private double y;
+    private double z;
+    private float pitch;
+    private float yaw;
+    private PacketPlayerType type;
 
-	public Player getPlayer() {
-		return this.Player;
-	}
+    public PacketPlayerEvent(final Player Player, final double x, final double y, final double z, final float yaw,
+                             final float pitch, final PacketPlayerType type) {
+        super();
+        this.Player = Player;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.pitch = pitch;
+        this.yaw = yaw;
+        this.type = type;
+    }
 
-	public double getX() {
-		return this.x;
-	}
+    public static HandlerList getHandlerList() {
+        return PacketPlayerEvent.handlers;
+    }
 
-	public double getY() {
-		return this.y;
-	}
+    public Player getPlayer() {
+        return this.Player;
+    }
 
-	public double getZ() {
-		return this.z;
-	}
+    public double getX() {
+        return this.x;
+    }
 
-	public float getYaw() {
-		return this.yaw;
-	}
+    public double getY() {
+        return this.y;
+    }
 
-	public float getPitch() {
-		return this.pitch;
-	}
+    public double getZ() {
+        return this.z;
+    }
 
-	public PacketPlayerType getType() {
-		return this.type;
-	}
+    public float getYaw() {
+        return this.yaw;
+    }
 
-	public HandlerList getHandlers() {
-		return PacketPlayerEvent.handlers;
-	}
+    public float getPitch() {
+        return this.pitch;
+    }
 
-	public static HandlerList getHandlerList() {
-		return PacketPlayerEvent.handlers;
-	}
+    public PacketPlayerType getType() {
+        return this.type;
+    }
+
+    public HandlerList getHandlers() {
+        return PacketPlayerEvent.handlers;
+    }
 }

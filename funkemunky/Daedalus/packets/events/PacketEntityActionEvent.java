@@ -1,40 +1,41 @@
 package funkemunky.Daedalus.packets.events;
 
-import org.bukkit.event.HandlerList;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
+import org.bukkit.event.HandlerList;
 
 public class PacketEntityActionEvent extends Event {
-	public int Action;
-	public Player Player;
-	private static final HandlerList handlers;
+    private static final HandlerList handlers;
 
-	static {
-		handlers = new HandlerList();
-	}
+    static {
+        handlers = new HandlerList();
+    }
 
-	public PacketEntityActionEvent(final Player Player, final int Action) {
-		super();
-		this.Player = Player;
-		this.Action = Action;
-	}
+    public int Action;
+    public Player Player;
 
-	public Player getPlayer() {
-		return this.Player;
-	}
+    public PacketEntityActionEvent(final Player Player, final int Action) {
+        super();
+        this.Player = Player;
+        this.Action = Action;
+    }
 
-	public int getAction() {
-		return this.Action;
-	}
+    public static HandlerList getHandlerList() {
+        return PacketEntityActionEvent.handlers;
+    }
 
-	public HandlerList getHandlers() {
-		return PacketEntityActionEvent.handlers;
-	}
+    public Player getPlayer() {
+        return this.Player;
+    }
 
-	public static HandlerList getHandlerList() {
-		return PacketEntityActionEvent.handlers;
-	}
+    public int getAction() {
+        return this.Action;
+    }
 
-	public class PlayerAction {
-	}
+    public HandlerList getHandlers() {
+        return PacketEntityActionEvent.handlers;
+    }
+
+    public class PlayerAction {
+    }
 }
