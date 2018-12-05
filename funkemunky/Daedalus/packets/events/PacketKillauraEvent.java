@@ -5,34 +5,33 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 public class PacketKillauraEvent extends Event {
-    private static final HandlerList handlers;
+	private Player Player;
+	private static final HandlerList handlers;
+	private PacketPlayerType type;
 
-    static {
-        handlers = new HandlerList();
-    }
+	static {
+		handlers = new HandlerList();
+	}
 
-    private Player Player;
-    private PacketPlayerType type;
+	public PacketKillauraEvent(final Player Player, final PacketPlayerType type) {
+		super();
+		this.Player = Player;
+		this.type = type;
+	}
 
-    public PacketKillauraEvent(final Player Player, final PacketPlayerType type) {
-        super();
-        this.Player = Player;
-        this.type = type;
-    }
+	public Player getPlayer() {
+		return this.Player;
+	}
 
-    public static HandlerList getHandlerList() {
-        return PacketKillauraEvent.handlers;
-    }
+	public PacketPlayerType getType() {
+		return this.type;
+	}
 
-    public Player getPlayer() {
-        return this.Player;
-    }
+	public HandlerList getHandlers() {
+		return PacketKillauraEvent.handlers;
+	}
 
-    public PacketPlayerType getType() {
-        return this.type;
-    }
-
-    public HandlerList getHandlers() {
-        return PacketKillauraEvent.handlers;
-    }
+	public static HandlerList getHandlerList() {
+		return PacketKillauraEvent.handlers;
+	}
 }

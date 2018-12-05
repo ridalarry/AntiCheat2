@@ -1,32 +1,31 @@
 package funkemunky.Daedalus.packets.events;
 
+import org.bukkit.event.HandlerList;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
-import org.bukkit.event.HandlerList;
 
 public class PacketKeepAliveEvent extends Event {
-    private static final HandlerList handlers;
+	public Player Player;
+	private static final HandlerList handlers;
 
-    static {
-        handlers = new HandlerList();
-    }
+	static {
+		handlers = new HandlerList();
+	}
 
-    public Player Player;
+	public PacketKeepAliveEvent(final Player Player) {
+		super();
+		this.Player = Player;
+	}
 
-    public PacketKeepAliveEvent(final Player Player) {
-        super();
-        this.Player = Player;
-    }
+	public Player getPlayer() {
+		return this.Player;
+	}
 
-    public static HandlerList getHandlerList() {
-        return PacketKeepAliveEvent.handlers;
-    }
+	public HandlerList getHandlers() {
+		return PacketKeepAliveEvent.handlers;
+	}
 
-    public Player getPlayer() {
-        return this.Player;
-    }
-
-    public HandlerList getHandlers() {
-        return PacketKeepAliveEvent.handlers;
-    }
+	public static HandlerList getHandlerList() {
+		return PacketKeepAliveEvent.handlers;
+	}
 }
